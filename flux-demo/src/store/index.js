@@ -21,7 +21,7 @@ let ToDoListStore = Object.assign({}, EventEmitter.prototype, {
     return this.list.filter(item => item.done);
   },
 
-  getNotDonwList() {
+  getNotDoneList() {
     return this.list.filter(item => !item.done);
   },
 

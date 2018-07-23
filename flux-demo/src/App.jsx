@@ -15,7 +15,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       doneList: ToDoListStore.getDoneList(),
-      notDoneList: ToDoListStore.getNotDonwList(),
+      notDoneList: ToDoListStore.getNotDoneList(),
       adding: false,
       content: '',
     }
@@ -26,7 +26,7 @@ class App extends React.Component {
     this.setState({
       content: '',
       doneList: ToDoListStore.getDoneList(),
-      notDoneList: ToDoListStore.getNotDonwList(),
+      notDoneList: ToDoListStore.getNotDoneList(),
     });
   }
 
