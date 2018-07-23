@@ -9,12 +9,14 @@ function resolve(dir) {
 
 var config = {
   mode: 'development',
+  devtool: 'inline-source-map',
   entry: resolve('./src/index.js'),
   output: {
     filename: 'bundle.js',
     path: resolve('./dist'),
   },
   devServer: {
+    host: '127.0.0.1',
     port: 3001,
   },
   module: {

@@ -3,16 +3,51 @@
   padding-top: 50px;
 }
 
-
-.todo-list{
+.container{
   width: 600px;
   border: 1px solid #ddd;
-  padding: 0 20px;
   margin: 0 auto;
+  padding-top: 10px;
+  border-radius: 5px;
+  .title{
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 24px;
+  }
+}
+
+.todo-input-container{
+  padding: 10px;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  .todo-input{
+    flex-grow: 1;flex-shrink: 1;
+    width: 100%;
+    line-height: 36px;
+    height: 36px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0px;
+    padding-left: 15px;
+  }
+  .add-btn{
+    color: #24a9e1;
+    flex-grow: 0;flex-shrink: 0;
+    line-height: 36px;
+    height: 36px;
+    margin-left: 5px;
+  }
+}
+
+.todo-list{
+  padding: 0 20px;
   .todo-item{
     line-height: 44px;
     display: flex;
     padding: 0 10px;
+    color: #000;
     &+.todo-item{
       border-top: 1px solid #ddd;
     }
@@ -27,8 +62,25 @@
     }
     .operation{
       flex-grow: 0;flex-shrink: 0;
-      .btn+.btn{
-        margin-left: 10px;
+      .btn{
+        color: #19CAAD;
+        &.del{
+          color: #ff6701;
+        }
+        &+.btn{
+          margin-left: 10px;
+        }
+      }
+    }
+    &.done{
+      color: #ccc;
+      .operation{
+        .btn{
+          color: #9e7d50;
+          &.del{
+            color: #ff6701;
+          }
+        }
       }
     }
   }
